@@ -1,36 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anbarasu S | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
 <header>
   <nav>
     <div class="logo">Anbarasu S</div>
     <ul class="nav-links">
-      <li><a href="#home" data-target="home">Home</a></li>
-      <li><a href="#about" data-target="about">About</a></li>
-      <li><a href="#skills" data-target="skills">Skills</a></li>
-      <li><a href="#projects" data-target="projects">Projects</a></li>
-      <li><a href="#experience" data-target="experience">Experience</a></li>
-      <li><a href="#contact" data-target="contact">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="hamburger" aria-label="Menu"><span></span><span></span><span></span></div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
   </nav>
 </header>
 
 <main>
-  <!-- Home Section -->
-  <section id="home" class="section active-section">
+  <!-- Home -->
+  <section id="home">
     <div class="home-content">
       <h1>Hello, I'm <span>Anbarasu S</span></h1>
       <p>Data Analyst | SQL | Python | Power BI | Excel</p>
-      <a href="#contact" data-target="contact" class="btn">Get in Touch</a>
+      <a href="#contact" class="btn">Get in Touch</a>
       <div class="background-animation">
         <div class="bar-chart">
           <div style="--height:80%"></div>
@@ -45,64 +34,49 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="section">
+  <section id="about">
     <h2>Professional Summary</h2>
-    <p>Recent Computer Science Graduate with strong skills in SQL, Python, Excel, and Power BI. Experienced in building dashboards, analyzing datasets, and providing actionable insights to support data-driven decisions.</p>
+    <p>Recent Computer Science Graduate with strong skills in SQL, Python, Excel, and Power BI...</p>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="section">
+  <section id="skills">
     <h2>Technical Skills</h2>
     <div class="skills-container">
-      <div class="skill" title="SQL"><span>🗄️</span> SQL</div>
-      <div class="skill" title="Python"><span>🐍</span> Python</div>
-      <div class="skill" title="Excel"><span>📊</span> Excel</div>
-      <div class="skill" title="Power BI"><span>📈</span> Power BI</div>
-      <div class="skill" title="Tableau"><span>📉</span> Tableau</div>
-      <div class="skill" title="Data Cleaning"><span>🧹</span> Cleaning</div>
+      <div class="skill"><span>🗄️</span> SQL</div>
+      <div class="skill"><span>🐍</span> Python</div>
+      <div class="skill"><span>📊</span> Excel</div>
+      <div class="skill"><span>📈</span> Power BI</div>
+      <div class="skill"><span>📉</span> Tableau</div>
+      <div class="skill"><span>🧹</span> Data Cleaning</div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="section">
+  <section id="projects">
     <h2>Projects</h2>
     <div class="project">
       <h3>Candidate Application Analytics Dashboard</h3>
       <ul>
-        <li>Analyzed 1000+ applications by role, platform, and salary.</li>
-        <li>Visualized shortlist rate and hiring trends improving decision-making by 20%.</li>
+        <li>Analyzed 1000+ applications</li>
       </ul>
     </div>
     <div class="project">
       <h3>Insurance Claim Dashboard</h3>
       <ul>
-        <li>Tracked 10,000+ insurance claims and settlement trends.</li>
-        <li>Applied data cleaning, DAX, and dashboard design for efficiency.</li>
+        <li>Tracked 10,000+ insurance claims</li>
       </ul>
     </div>
   </section>
 
   <!-- Experience Section -->
-  <section id="experience" class="section">
+  <section id="experience">
     <h2>Experience</h2>
-    <div class="experience">
-      <h3>Data Analyst Intern, Cavin Infotech, Chennai</h3>
-      <ul>
-        <li>Optimized SQL queries reducing report time by 30%</li>
-        <li>Developed Power BI dashboards for 5+ departments</li>
-      </ul>
-    </div>
-    <div class="experience">
-      <h3>Data Analyst Intern, Iconix Solutions, Tirunelveli</h3>
-      <ul>
-        <li>Cleaned and validated large datasets of 50,000+ rows</li>
-        <li>Built recurring Excel dashboards improving KPI accuracy by 25%</li>
-      </ul>
-    </div>
+    <p>Data Analyst Intern, Cavin Infotech...</p>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section">
+  <section id="contact">
     <h2>Contact Me</h2>
     <form id="contact-form" action="https://formspree.io/f/mdkwkvav" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -114,11 +88,3 @@
     </form>
   </section>
 </main>
-
-<footer>
-  <p>&copy; 2025 Anbarasu S | <a href="mailto:anbuarasu2017@gmail.com">Email Me</a></p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
