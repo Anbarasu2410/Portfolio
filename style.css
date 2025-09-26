@@ -1,4 +1,6 @@
-/* Global */
+/* =========================
+   Global Styles
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +20,9 @@ a {
   color: inherit;
 }
 
-/* Header & Navigation */
+/* =========================
+   Navigation
+========================= */
 header {
   position: fixed;
   width: 100%;
@@ -47,16 +51,33 @@ nav {
 }
 
 .nav-links li a {
-  transition: 0.3s;
   font-weight: 600;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.3s ease;
 }
 
-.nav-links li a:hover, .nav-links li a.active {
+.nav-links li a:hover,
+.nav-links li a.active {
   color: #007BFF;
-  transform: scale(1.1);
 }
 
-/* Hamburger */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #007BFF;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -72,18 +93,24 @@ nav {
   transition: 0.3s;
 }
 
-/* Sections */
+/* =========================
+   Sections
+========================= */
 section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 20px;
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  margin-bottom: 50px;
 }
 
-/* Home */
 .home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   background: linear-gradient(to right, #007BFF, #00C6FF);
   color: #fff;
   text-align: center;
@@ -112,23 +139,17 @@ section {
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* About, Education, Certifications */
-.about-section, .education-section, .certifications-section {
-  background: #fff;
-  border-radius: 10px;
-  padding: 60px 20px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  max-width: 1000px;
-  width: 100%;
-  margin-bottom: 30px;
+/* =========================
+   About Section
+========================= */
+.about-section p {
+  margin-top: 15px;
+  line-height: 1.8;
 }
 
-/* Skills */
-.skills-section {
-  text-align: center;
-}
-
+/* =========================
+   Skills Section
+========================= */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -152,41 +173,14 @@ section {
   transform: translateY(-3px) scale(1.05);
 }
 
-.skill i {
-  margin-right: 8px;
-}
-
-/* Dropdown Hover for skills */
-.skill .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 120%;
-  left: 0;
-  background: #fff;
-  color: #333;
-  border-radius: 10px;
-  padding: 10px;
-  min-width: 150px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  z-index: 10;
-}
-
-.skill:hover .dropdown-content {
-  display: block;
-}
-
-/* Projects */
-.projects-section {
-  text-align: center;
-}
-
+/* =========================
+   Projects Section
+========================= */
 .project {
-  background: #fff;
   padding: 25px;
   margin: 20px 0;
   border-radius: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .project:hover {
@@ -194,49 +188,25 @@ section {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Experience */
-.experience-section {
-  text-align: center;
+/* =========================
+   Experience & Achievements
+========================= */
+.achievement, .experience {
+  margin: 20px 0;
 }
 
-.experience-item {
-  background: #fff;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+.achievement h3, .experience h3 {
+  margin-bottom: 5px;
+  color: #007BFF;
 }
 
-.experience-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+.achievement p, .experience p {
+  line-height: 1.6;
 }
 
-/* Achievements */
-.achievements-section {
-  text-align: center;
-}
-
-.achievement-item {
-  background: #fff;
-  padding: 15px 20px;
-  margin: 10px 0;
-  border-radius: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.achievement-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* Contact */
-.contact-section {
-  text-align: center;
-}
-
+/* =========================
+   Contact Section
+========================= */
 form {
   display: flex;
   flex-direction: column;
@@ -253,6 +223,7 @@ input, textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 input:focus, textarea:focus {
@@ -270,6 +241,7 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 button:hover {
@@ -283,9 +255,12 @@ button:hover {
   font-weight: 600;
   font-size: 1rem;
   color: green;
+  transition: all 0.3s ease;
 }
 
-/* Footer */
+/* =========================
+   Footer
+========================= */
 footer {
   text-align: center;
   padding: 25px;
@@ -294,7 +269,9 @@ footer {
   font-weight: 500;
 }
 
-/* Responsive */
+/* =========================
+   Responsive
+========================= */
 @media (max-width:768px) {
   .nav-links {
     position: fixed;
