@@ -1,4 +1,4 @@
-/* Global Reset */
+/* Global */
 * {
   margin: 0;
   padding: 0;
@@ -13,13 +13,12 @@ body {
   background: #f8f9fa;
 }
 
-/* Links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Header & Navigation */
+/* Header / Navigation */
 header {
   position: fixed;
   width: 100%;
@@ -45,48 +44,19 @@ nav {
   list-style: none;
   display: flex;
   gap: 2rem;
-  align-items: center;
 }
 
 .nav-links li a {
   transition: 0.3s;
   font-weight: 600;
-  position: relative;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
   color: #007BFF;
+  transform: scale(1.1);
 }
 
-/* Dropdown Arrow for Hover Sections */
-.nav-links li.dropdown:hover > ul {
-  display: block;
-}
-
-.nav-links li ul {
-  display: none;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  background: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  padding: 10px 0;
-  min-width: 200px;
-  z-index: 200;
-}
-
-.nav-links li ul li {
-  padding: 10px 20px;
-}
-
-.nav-links li ul li a:hover {
-  color: #007BFF;
-  transform: scale(1.05);
-}
-
-/* Hamburger Menu */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -106,9 +76,21 @@ nav {
 section {
   padding: 100px 20px;
   max-width: 1000px;
-  margin: auto;
+  margin: 80px auto 50px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.7s ease;
 }
 
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Home Section */
 .home-section {
   display: flex;
   align-items: center;
@@ -143,17 +125,20 @@ section {
 }
 
 /* About Section */
-.about-section,
-.skills-section,
-.projects-section,
-.experience-section,
-.achievements-section,
-.contact-section {
+.about-section h2,
+.skills-section h2,
+.projects-section h2,
+.experience-section h2,
+.achievements-section h2,
+.contact-section h2 {
   text-align: center;
-  background: #fff;
-  border-radius: 10px;
-  padding: 60px 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+  color: #007BFF;
+}
+
+.about-section p {
+  text-align: justify;
+  line-height: 1.8;
 }
 
 /* Skills Section */
@@ -162,7 +147,6 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 20px;
 }
 
 .skill {
@@ -171,24 +155,23 @@ section {
   padding: 12px 25px;
   border-radius: 25px;
   font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .skill:hover {
   background: #0056b3;
-  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-5px) scale(1.05);
 }
 
 /* Projects Section */
 .project {
-  background: #fff;
-  padding: 25px;
-  margin: 20px 0;
+  background: #f8f9fa;
+  padding: 20px;
+  margin: 15px 0;
   border-radius: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  cursor: pointer;
 }
 
 .project:hover {
@@ -196,13 +179,20 @@ section {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.project a {
-  color: #007BFF;
-  font-weight: 600;
+/* Experience & Achievements */
+.experience-card,
+.achievement-card {
+  background: #f8f9fa;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project a:hover {
-  text-decoration: underline;
+.experience-card:hover,
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* Contact Form */
@@ -240,7 +230,6 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 button:hover {
@@ -291,15 +280,11 @@ footer {
     display: flex;
   }
 
-  .skills-container {
-    gap: 10px;
-  }
-
-  .project {
-    padding: 20px;
-  }
-
-  form {
-    padding: 20px;
+  .skills-container,
+  .project,
+  .experience-card,
+  .achievement-card {
+    width: 90%;
+    margin: 10px auto;
   }
 }
