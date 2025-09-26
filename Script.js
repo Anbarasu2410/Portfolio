@@ -1,37 +1,49 @@
-// Hamburger toggle
+// Hamburger Menu Toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
 
-// Highlight active page
-document.querySelectorAll('.nav-links li a').forEach(link => {
-  if(link.href === window.location.href) link.classList.add('active');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
 
-// Contact Form
+// Highlight Active Navigation Link
+document.querySelectorAll('.nav-links li a').forEach(link => {
+  if(link.href === window.location.href){
+    link.classList.add('active');
+  }
+});
+
+// Contact Form Submission (Formspree)
 const form = document.getElementById('contact-form');
+const formMessage = document.getElementById('form-message');
+
 if(form){
-  const formMessage = document.getElementById('form-message');
-  form.addEventListener('submit', async e => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const formData = new FormData(form);
     try {
-      const response = await fetch(form.action, { method: form.method, body: formData, headers: {'Accept':'application/json'} });
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
       if(response.ok){
-        showFormMessage("✅ Message sent successfully!", "green");
+        showFormMessage("✅ Thank you! Your message has been sent.", "green");
         form.reset();
-      } else showFormMessage("❌ Something went wrong!", "red");
+      } else {
+        showFormMessage("❌ Oops! Something went wrong. Please try again.", "red");
+      }
     } catch(err){
-      showFormMessage("❌ Something went wrong!", "red");
+      showFormMessage("❌ Oops! Something went wrong. Please try again.", "red");
       console.error(err);
     }
   });
 }
 
+// Form message helper
 function showFormMessage(msg, color){
-  const formMessage = document.getElementById('form-message');
   formMessage.textContent = msg;
   formMessage.style.color = color;
   formMessage.style.opacity = '1';
-  setTimeout(()=>{ formMessage.style.opacity='0'; }, 5000);
+  setTimeout(() => { formMessage.style.opacity = '0'; }, 5000);
 }
