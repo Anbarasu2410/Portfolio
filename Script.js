@@ -42,4 +42,16 @@ form.addEventListener('submit', async (e) => {
       showFormMessage("❌ Oops! Something went wrong. Please try again.", "red");
     }
   } catch (error) {
-    showFormMessage("❌
+    showFormMessage("❌ Oops! Something went wrong. Please try again.", "red");
+    console.error("Form submission error:", error);
+  }
+});
+
+function showFormMessage(message, color) {
+  formMessage.textContent = message;
+  formMessage.style.color = color;
+  formMessage.style.opacity = '1';
+  setTimeout(() => {
+    formMessage.style.opacity = '0';
+  }, 5000);
+}
