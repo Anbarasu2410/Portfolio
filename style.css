@@ -1,4 +1,6 @@
-/* Global */
+/* =========================
+   Global Styles
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +15,14 @@ body {
   background: #f8f9fa;
 }
 
-a { text-decoration: none; color: inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-/* Header & Navigation */
+/* =========================
+   Navigation
+========================= */
 header {
   position: fixed;
   width: 100%;
@@ -44,14 +51,31 @@ nav {
 }
 
 .nav-links li a {
-  transition: 0.3s;
   font-weight: 600;
   position: relative;
+  padding: 5px 0;
+  transition: all 0.3s ease;
 }
 
-.nav-links li a.active,
-.nav-links li a:hover {
+.nav-links li a:hover,
+.nav-links li a.active {
   color: #007BFF;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #007BFF;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
 }
 
 .hamburger {
@@ -69,25 +93,34 @@ nav {
   transition: 0.3s;
 }
 
-/* Sections */
+/* =========================
+   Sections
+========================= */
 section {
   padding: 100px 20px;
   max-width: 1000px;
-  margin: 120px auto 50px auto;
+  margin: auto;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  position: relative;
+  margin-bottom: 50px;
 }
 
-/* Section Titles */
-h2 {
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #007BFF, #00C6FF);
+  color: #fff;
   text-align: center;
-  margin-bottom: 30px;
-  color: #007BFF;
 }
 
-/* Buttons */
+.home-section h1 span {
+  color: #FFD700;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
 .btn {
   margin-top: 20px;
   display: inline-block;
@@ -106,12 +139,23 @@ h2 {
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* Skills */
+/* =========================
+   About Section
+========================= */
+.about-section p {
+  margin-top: 15px;
+  line-height: 1.8;
+}
+
+/* =========================
+   Skills Section
+========================= */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  margin-top: 20px;
 }
 
 .skill {
@@ -121,8 +165,7 @@ h2 {
   border-radius: 25px;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  cursor: pointer;
+  position: relative;
 }
 
 .skill:hover {
@@ -130,14 +173,14 @@ h2 {
   transform: translateY(-3px) scale(1.05);
 }
 
-/* Projects */
+/* =========================
+   Projects Section
+========================= */
 .project {
-  background: #fff;
   padding: 25px;
   margin: 20px 0;
   border-radius: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .project:hover {
@@ -145,18 +188,25 @@ h2 {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.project a {
+/* =========================
+   Experience & Achievements
+========================= */
+.achievement, .experience {
+  margin: 20px 0;
+}
+
+.achievement h3, .experience h3 {
+  margin-bottom: 5px;
   color: #007BFF;
-  font-weight: 600;
-  display: inline-block;
-  margin-top: 10px;
 }
 
-.project a:hover {
-  text-decoration: underline;
+.achievement p, .experience p {
+  line-height: 1.6;
 }
 
-/* Contact Form */
+/* =========================
+   Contact Section
+========================= */
 form {
   display: flex;
   flex-direction: column;
@@ -208,7 +258,9 @@ button:hover {
   transition: all 0.3s ease;
 }
 
-/* Footer */
+/* =========================
+   Footer
+========================= */
 footer {
   text-align: center;
   padding: 25px;
@@ -217,7 +269,9 @@ footer {
   font-weight: 500;
 }
 
-/* Responsive */
+/* =========================
+   Responsive
+========================= */
 @media (max-width:768px) {
   .nav-links {
     position: fixed;
@@ -234,6 +288,11 @@ footer {
     box-shadow: -2px 0 10px rgba(0,0,0,0.1);
   }
 
-  .nav-links.active { right: 0; }
-  .hamburger { display: flex; }
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
