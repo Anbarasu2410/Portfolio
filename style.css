@@ -1,75 +1,30 @@
-/* Global */
-* { margin: 0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
-body { line-height:1.6; color:#333; scroll-behavior:smooth; background:#f8f9fa; }
-a { text-decoration:none; color:inherit; }
-
-/* Header */
-header { position: fixed; width: 100%; background: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index:100; }
-nav { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; }
-.logo { font-weight:700; font-size:1.5rem; color:#007BFF; }
-.nav-links { list-style:none; display:flex; gap:2rem; }
-.nav-links li { position:relative; }
-.nav-links li a { transition:0.3s; font-weight:600; padding:5px; display:block; }
-.nav-links li a:hover, .nav-links li a.active { color:#007BFF; transform:scale(1.05); }
-
-/* Dropdown */
-.nav-links li ul { position:absolute; top:35px; left:0; background:#fff; box-shadow:0 5px 15px rgba(0,0,0,0.1); display:none; list-style:none; border-radius:5px; min-width:150px; }
-.nav-links li:hover ul { display:block; }
-.nav-links li ul li a { padding:10px; white-space:nowrap; }
-.nav-links li ul li a:hover { background:#f0f4f8; }
-
-/* Hamburger */
-.hamburger { display:none; flex-direction:column; cursor:pointer; gap:5px; }
-.hamburger span { width:25px; height:3px; background:#007BFF; display:block; transition:0.3s; }
-
-/* Sections */
-section { padding:100px 20px; max-width:1000px; margin:auto; border-radius:10px; }
-
-/* Home */
-.home-section { display:flex; align-items:center; justify-content:center; height:100vh; background:linear-gradient(to right,#007BFF,#00C6FF); color:#fff; text-align:center; }
-.home-section h1 span { color:#FFD700; text-shadow:1px 1px 5px rgba(0,0,0,0.3); }
-.btn { margin-top:20px; display:inline-block; background:#FFD700; color:#333; padding:12px 30px; border-radius:50px; font-weight:600; transition:0.3s; box-shadow:0 5px 15px rgba(0,0,0,0.2); }
-.btn:hover { background:#ffbf00; transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.3); }
-
-/* About / Education / Certification */
-.about-section h2, .education-section h2, .certification-section h2 { margin-bottom:30px; }
-.card { background:#fff; padding:20px; margin:15px 0; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.05); transition:0.3s; }
-.card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.1); }
-
-/* Skills */
-.skills-container { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:20px; }
-.skill { background:#007BFF; color:#fff; padding:12px 25px; border-radius:25px; font-weight:600; transition:all 0.3s ease; box-shadow:0 5px 15px rgba(0,0,0,0.1); cursor:pointer; display:flex; align-items:center; gap:8px; }
-.skill:hover { background:#0056b3; transform:translateY(-3px) scale(1.05); }
-
-/* Projects */
-.project { background:#fff; padding:25px; margin:20px 0; border-radius:15px; transition:transform 0.3s, box-shadow 0.3s; box-shadow:0 5px 15px rgba(0,0,0,0.05); }
-.project:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.15); }
-
-/* Experience */
-.experience { background:#fff; padding:20px; margin:15px 0; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.05); transition:0.3s; }
-.experience:hover { transform:translateY(-3px); box-shadow:0 10px 20px rgba(0,0,0,0.1); }
-
-/* Achievements */
-.achievement { background:#fff; padding:20px; margin:15px 0; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.05); transition:0.3s; }
-.achievement:hover { transform:translateY(-3px); box-shadow:0 10px 20px rgba(0,0,0,0.1); }
-
-/* Contact */
-form { display:flex; flex-direction:column; gap:15px; max-width:500px; margin:auto; background:#fff; padding:30px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1); }
-input, textarea { padding:12px; border:1px solid #ccc; border-radius:10px; transition:all 0.3s ease; }
-input:focus, textarea:focus { border-color:#007BFF; box-shadow:0 0 10px rgba(0,123,255,0.2); outline:none; }
-button { background:#007BFF; color:#fff; padding:12px; border:none; border-radius:50px; font-weight:600; cursor:pointer; transition:all 0.3s ease; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
-button:hover { background:#0056b3; transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
-#form-message { margin-top:10px; font-weight:600; font-size:1rem; color:green; transition:all 0.3s ease; }
-
-/* Footer */
-footer { text-align:center; padding:25px; background:#f4f4f4; margin-top:50px; font-weight:500; }
-
-/* Responsive */
-@media(max-width:768px){
-  .nav-links { position:fixed; right:-100%; top:0; height:100vh; width:60%; background:#fff; flex-direction:column; justify-content:center; align-items:center; transition:0.3s; gap:2rem; box-shadow:-2px 0 10px rgba(0,0,0,0.1);}
-  .nav-links.active { right:0; }
-  .hamburger { display:flex; }
-  .skills-container { gap:10px; }
-  .project, .achievement, .experience, .card { padding:20px; }
-  form { padding:20px; }
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{line-height:1.6;color:#333;scroll-behavior:smooth;background:#f8f9fa;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+header{position:fixed;width:100%;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.1);z-index:100;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;}
+.logo{font-weight:700;font-size:1.5rem;color:#007BFF;}
+.nav-links{display:flex;gap:1.5rem;}
+.nav-links li a{transition:0.3s;font-weight:600;}
+.nav-links li a.active,a:hover{color:#007BFF;transform:scale(1.1);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:25px;height:3px;background:#007BFF;display:block;transition:0.3s;}
+section{padding:100px 20px;max-width:1000px;margin:auto;background:#fff;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.05);}
+h2{margin-bottom:15px;text-align:center;color:#007BFF;}
+h3{margin-bottom:10px;color:#333;}
+p,li{margin-bottom:10px;}
+.btn{display:inline-block;background:#007BFF;color:#fff;padding:12px 30px;border-radius:50px;font-weight:600;transition:all 0.3s ease;box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+.btn:hover{background:#0056b3;transform:translateY(-3px);}
+.skills-container{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;}
+.skill{background:#007BFF;color:#fff;padding:12px 25px;border-radius:25px;font-weight:600;transition:all 0.3s ease;box-shadow:0 5px 15px rgba(0,0,0,0.1);cursor:pointer;}
+.skill:hover{background:#0056b3;transform:translateY(-3px) scale(1.05);}
+.project, .experience ul, .achievements-section ul{margin:15px 0;padding:15px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.05);}
+.project:hover, .experience:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,0.1);}
+form{display:flex;flex-direction:column;gap:15px;max-width:500px;margin:auto;background:#fff;padding:30px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.1);}
+input,textarea{padding:12px;border:1px solid #ccc;border-radius:10px;transition:all 0.3s ease;}
+input:focus,textarea:focus{border-color:#007BFF;box-shadow:0 0 10px rgba(0,123,255,0.2);outline:none;}
+button{background:#007BFF;color:#fff;padding:12px;border:none;border-radius:50px;font-weight:600;cursor:pointer;transition:all 0.3s ease;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+button:hover{background:#0056b3;transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.2);}
+footer{text-align:center;padding:25px;background:#f4f4f4;margin-top:50px;font-weight:500;}
+@media(max-width:768px){.nav-links{position:fixed;right:-100%;top:0;height:100vh;width:60%;background:#fff;flex-direction:column;justify-content:center;align-items:center;transition:0.3s;gap:2rem;box-shadow:-2px 0 10px rgba(0,0,0,0.1);}.nav-links.active{right:0;}.hamburger{display:flex;}.skills-container{gap:10px;}form{padding:20px;}}
