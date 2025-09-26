@@ -13,9 +13,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
-      if (navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-      }
+      if (navLinks.classList.contains('active')) navLinks.classList.remove('active');
     }
   });
 });
@@ -24,34 +22,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const form = document.getElementById('contact-form');
 const formMessage = document.getElementById('form-message');
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const formData = new FormData(form);
-
-  try {
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (response.ok) {
-      showFormMessage("✅ Thank you! Your message has been sent.", "green");
-      form.reset();
-    } else {
-      showFormMessage("❌ Oops! Something went wrong. Please try again.", "red");
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        showFormMessage("✅ Thank you! Your message has been sent.", "green");
+        form.reset();
+      } else {
+        showFormMessage("❌ Oops! Something went wrong.", "red");
+      }
+    } catch (error) {
+      showFormMessage("❌ Oops! Something went wrong.", "red");
+      console.error(error);
     }
-  } catch (error) {
-    showFormMessage("❌ Oops! Something went wrong. Please try again.", "red");
-    console.error("Form submission error:", error);
-  }
-});
+  });
+}
 
 function showFormMessage(message, color) {
   formMessage.textContent = message;
   formMessage.style.color = color;
   formMessage.style.opacity = '1';
-  setTimeout(() => {
-    formMessage.style.opacity = '0';
-  }, 5000);
+  setTimeout(() => { formMessage.style.opacity = '0'; }, 5000);
 }
