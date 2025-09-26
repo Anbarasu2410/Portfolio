@@ -13,12 +13,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
-      if (navLinks.classList.contains('active')) navLinks.classList.remove('active');
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+      }
     }
   });
 });
 
-// Contact Form Submission (Formspree)
+// Contact Form Submission
 const form = document.getElementById('contact-form');
 const formMessage = document.getElementById('form-message');
 
@@ -32,20 +34,12 @@ form.addEventListener('submit', async (e) => {
       body: formData,
       headers: { 'Accept': 'application/json' }
     });
+
     if (response.ok) {
-      showFormMessage("✅ Message sent successfully!", "green");
+      showFormMessage("✅ Thank you! Your message has been sent.", "green");
       form.reset();
     } else {
-      showFormMessage("❌ Something went wrong.", "red");
+      showFormMessage("❌ Oops! Something went wrong. Please try again.", "red");
     }
-  } catch (err) {
-    showFormMessage("❌ Something went wrong.", "red");
-  }
-});
-
-function showFormMessage(message, color) {
-  formMessage.textContent = message;
-  formMessage.style.color = color;
-  formMessage.style.opacity = '1';
-  setTimeout(() => { formMessage.style.opacity = '0'; }, 5000);
-}
+  } catch (error) {
+    showFormMessage("❌
