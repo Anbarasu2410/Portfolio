@@ -2,53 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anbarasu S | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <header>
-    <h1>Hi, I'm Anbarasu S</h1>
-    <p>Recent CSE Graduate | Aspiring Data Analyst & Power BI Developer</p>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm Anbarasu S</h1>
+      <p>Recent CSE Graduate | Aspiring Data Analyst & Power BI Developer</p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
   </header>
 
-  <section id="about">
+  <!-- About Me -->
+  <section id="about" class="fade-in">
     <h2>About Me</h2>
-    <p>Passionate about Data Analytics, Business Intelligence, and Generative AI...</p>
+    <p>Passionate about Data Analytics, Business Intelligence, and Generative AI. Skilled in SQL, Python, Excel, and Power BI. Based in India.</p>
   </section>
 
-  <section id="skills">
+  <!-- Skills -->
+  <section id="skills" class="fade-in">
     <h2>Skills</h2>
-    <ul>
-      <li>Python, SQL, Excel, Power BI</li>
-      <li>Data Visualization & Dashboard Design</li>
-      <li>Generative AI & Predictive Analytics</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <img src="barchart.png" alt="Insurance Claim Dashboard">
-        <h3>Insurance Claim Dashboard</h3>
-        <p>Analyzed and visualized claim amounts...</p>
+    <div class="skills-container">
+      <div class="skill-card">
+        <i class="fas fa-database fa-2x"></i>
+        <p>SQL</p>
       </div>
-      <div class="project-card">
-        <img src="linechart.png" alt="Candidate Application Analytics">
-        <h3>Candidate Application Analytics Dashboard</h3>
-        <p>Tracked and visualized 500+ job applications...</p>
+      <div class="skill-card">
+        <i class="fab fa-python fa-2x"></i>
+        <p>Python</p>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-chart-bar fa-2x"></i>
+        <p>Power BI</p>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-file-excel fa-2x"></i>
+        <p>Excel</p>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/anbarasu24/">Anbarasu S</a></p>
-    <p>Email: anbuarasu2017@gmail.com</p>
-    <p>Phone: +91 6379946296</p>
+  <!-- Projects Slider -->
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="slider">
+      <div class="slide active">
+        <div class="project-placeholder">
+          <i class="fas fa-chart-line fa-3x"></i>
+          <h3>Insurance Claim Dashboard</h3>
+          <p>Analyzed and visualized claim amounts, coverage, and settlement trends using Power BI.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="project-placeholder">
+          <i class="fas fa-clipboard-list fa-3x"></i>
+          <h3>Candidate Application Analytics Dashboard</h3>
+          <p>Tracked and visualized 500+ job applications using Power BI dashboards.</p>
+        </div>
+      </div>
+      <button class="prev">&lt;</button>
+      <button class="next">&gt;</button>
+    </div>
   </section>
 
+  <!-- Contact -->
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/anbarasu24/">LinkedIn</a></p>
+      <p><i class="fas fa-envelope"></i> anbuarasu2017@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +91 6379946296</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>⭐ "Data tells a story, and I’m passionate about uncovering it."</p>
   </footer>
