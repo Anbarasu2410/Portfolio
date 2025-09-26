@@ -1,4 +1,4 @@
-// Smooth scroll for all anchor links
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Initial check
   revealSections();
-
   // Run on scroll
   window.addEventListener('scroll', revealSections);
 });
