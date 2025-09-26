@@ -1,75 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anbarasu | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anbarasu S | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav>
-      <div class="logo">Anbarasu</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </nav>
-  </header>
 
-  <!-- Home Section -->
-  <section id="home" class="home-section">
+<header>
+  <nav>
+    <div class="logo">Anbarasu S</div>
+    <ul class="nav-links">
+      <li><a href="#" data-target="home">Home</a></li>
+      <li><a href="#" data-target="about">About</a></li>
+      <li><a href="#" data-target="skills">Skills</a></li>
+      <li><a href="#" data-target="projects">Projects</a></li>
+      <li><a href="#" data-target="experience">Experience</a></li>
+      <li><a href="#" data-target="contact">Contact</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+</header>
+
+<main>
+  <!-- Home -->
+  <section id="home" class="section active-section">
     <div class="home-content">
-      <h1>Hello, I'm <span>Anbarasu</span></h1>
-      <p>Recent Computer Science graduate | Aspiring Data Analyst | SQL, Python, Excel, Power BI</p>
-      <a href="#contact" class="btn">Get in Touch</a>
+      <h1>Hello, I'm <span>Anbarasu S</span></h1>
+      <p>Data Analyst | SQL | Python | Power BI | Excel</p>
+      <a href="#" data-target="contact" class="btn">Get in Touch</a>
+      <div class="background-animation">
+        <div class="bar-chart">
+          <div style="--height:80%"></div>
+          <div style="--height:60%"></div>
+          <div style="--height:90%"></div>
+          <div style="--height:50%"></div>
+          <div style="--height:70%"></div>
+        </div>
+        <div class="pie-chart"></div>
+      </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <h2>About Me</h2>
-    <p>Recent Computer Science graduate and aspiring Data Analyst with experience in SQL, Python, Excel, Power BI, and data visualization. Passionate about transforming data into actionable insights to support business decisions.</p>
+  <!-- About -->
+  <section id="about" class="section">
+    <h2>Professional Summary</h2>
+    <p>Recent Computer Science Graduate with strong skills in SQL, Python, Excel, and Power BI. Experienced in building dashboards, analyzing datasets, and providing actionable insights to support data-driven decisions.</p>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills-section">
-    <h2>Skills</h2>
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h2>Technical Skills</h2>
     <div class="skills-container">
-      <div class="skill">SQL</div>
-      <div class="skill">Python</div>
-      <div class="skill">Excel</div>
-      <div class="skill">Power BI</div>
-      <div class="skill">Data Analysis</div>
-      <div class="skill">Dashboard Creation</div>
-      <div class="skill">Data Cleaning</div>
-      <div class="skill">Data Visualization</div>
+      <div class="skill" title="SQL"><span>🗄️</span> SQL</div>
+      <div class="skill" title="Python"><span>🐍</span> Python</div>
+      <div class="skill" title="Excel"><span>📊</span> Excel</div>
+      <div class="skill" title="Power BI"><span>📈</span> Power BI</div>
+      <div class="skill" title="Tableau"><span>📉</span> Tableau</div>
+      <div class="skill" title="Data Cleaning"><span>🧹</span> Cleaning</div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section">
+  <!-- Projects -->
+  <section id="projects" class="section">
     <h2>Projects</h2>
     <div class="project">
-      <h3>Insurance Claim Dashboard</h3>
-      <p>Interactive Power BI dashboard to monitor insurance claims and settlements. Improved reporting efficiency and claim tracking accuracy.</p>
+      <h3>Candidate Application Analytics Dashboard</h3>
+      <ul>
+        <li>Analyzed 1000+ applications by role, platform, and salary.</li>
+        <li>Visualized shortlist rate and hiring trends improving decision-making by 20%.</li>
+      </ul>
     </div>
     <div class="project">
-      <h3>Candidate Application Analytics Dashboard</h3>
-      <p>Power BI dashboard to track and analyze job applications, providing insights for HR decision-making.</p>
+      <h3>Insurance Claim Dashboard</h3>
+      <ul>
+        <li>Tracked 10,000+ insurance claims and settlement trends.</li>
+        <li>Applied data cleaning, DAX, and dashboard design for efficiency.</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="experience">
+      <h3>Data Analyst Intern, Cavin Infotech, Chennai</h3>
+      <ul>
+        <li>Optimized SQL queries reducing report time by 30%</li>
+        <li>Developed Power BI dashboards for 5+ departments</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
     <h2>Contact Me</h2>
     <form id="contact-form" action="https://formspree.io/f/mdkwkvav" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -80,12 +106,12 @@
       <p id="form-message"></p>
     </form>
   </section>
+</main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Anbarasu | <a href="mailto:anbuarasu2017@gmail.com">anbuarasu2017@gmail.com</a> | <a href="https://www.linkedin.com/in/anbarasu24/" target="_blank">LinkedIn</a></p>
-  </footer>
+<footer>
+  <p>&copy; 2025 Anbarasu S | <a href="mailto:anbuarasu2017@gmail.com">Email Me</a></p>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
