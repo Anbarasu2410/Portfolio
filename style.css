@@ -99,18 +99,18 @@ nav {
 section {
   padding: 100px 20px;
   max-width: 1000px;
-  margin: 120px auto 50px auto; /* extra top for header offset */
+  margin: auto;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  margin-bottom: 50px;
 }
 
 .home-section {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
   background: linear-gradient(to right, #007BFF, #00C6FF);
   color: #fff;
   text-align: center;
@@ -142,28 +142,9 @@ section {
 /* =========================
    About Section
 ========================= */
-.about-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #007BFF;
-}
-
-.about-section p, 
-.about-section ul {
-  margin-top: 10px;
+.about-section p {
+  margin-top: 15px;
   line-height: 1.8;
-}
-
-/* Education & Certifications */
-.education, .certifications {
-  margin-top: 20px;
-  padding: 15px;
-  border-left: 3px solid #007BFF;
-}
-
-.education h3, .certifications h3 {
-  color: #007BFF;
-  margin-bottom: 5px;
 }
 
 /* =========================
@@ -185,7 +166,6 @@ section {
   font-weight: 600;
   transition: all 0.3s ease;
   position: relative;
-  cursor: pointer;
 }
 
 .skill:hover {
@@ -201,7 +181,6 @@ section {
   margin: 20px 0;
   border-radius: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
 }
 
 .project:hover {
@@ -212,33 +191,71 @@ section {
 /* =========================
    Experience & Achievements
 ========================= */
-.experience, .achievement {
+.achievement, .experience {
   margin: 20px 0;
 }
 
-.experience h3, .achievement h3 {
+.achievement h3, .experience h3 {
   margin-bottom: 5px;
   color: #007BFF;
 }
 
-.experience p, .achievement p {
+.achievement p, .experience p {
   line-height: 1.6;
 }
 
 /* =========================
    Contact Section
 ========================= */
-.contact-section iframe, 
-.contact-section form {
-  width: 100%;
-  max-width: 700px;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
   margin: auto;
+  background: #fff;
+  padding: 30px;
   border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-.contact-section iframe {
-  height: 820px;
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 10px rgba(0,123,255,0.2);
+  outline: none;
+}
+
+button {
+  background: #007BFF;
+  color: #fff;
+  padding: 12px;
   border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+#form-message {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: green;
+  transition: all 0.3s ease;
 }
 
 /* =========================
