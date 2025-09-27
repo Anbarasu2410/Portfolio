@@ -27,9 +27,13 @@
 <section class="contact-section">
   <h2>Contact Me</h2>
 
-  <!-- Google Form integrated but invisible -->
-  <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLScgR0YMhhrFpcbGvtKqSzijvOTujwc3vGFTki08eS1_T-9-HA/formResponse" method="POST" target="hidden_iframe">
-    <input type="text" name="entry.1234567890" placeholder="Your Name" required> <!-- Replace with actual Google Form field IDs -->
+  <!-- Google Form Integration -->
+  <form id="contact-form" 
+        action="https://docs.google.com/forms/d/e/1FAIpQLScgR0YMhhrFpcbGvtKqSzijvOTujwc3vGFTki08eS1_T-9-HA/formResponse" 
+        method="POST" 
+        target="hidden_iframe">
+    <!-- Replace these entry IDs with your Google Form's actual field IDs -->
+    <input type="text" name="entry.1234567890" placeholder="Your Name" required>
     <input type="email" name="entry.0987654321" placeholder="Your Email" required>
     <input type="text" name="entry.1122334455" placeholder="Your Phone" required>
     <textarea name="entry.5566778899" rows="5" placeholder="Your Message" required></textarea>
@@ -37,7 +41,7 @@
     <p id="form-message"></p>
   </form>
 
-  <!-- Hidden iframe to submit form without leaving page -->
+  <!-- Hidden iframe ensures Google Form submits in background -->
   <iframe name="hidden_iframe" style="display:none;"></iframe>
 </section>
 
@@ -47,19 +51,5 @@
 </footer>
 
 <script src="script.js"></script>
-<script>
-  // Show confirmation message on submit
-  const form = document.getElementById('contact-form');
-  const formMessage = document.getElementById('form-message');
-
-  form.addEventListener('submit', function(e) {
-    formMessage.textContent = "✅ Thank you! Your message has been sent.";
-    formMessage.style.color = "green";
-    setTimeout(() => {
-      formMessage.textContent = "";
-    }, 5000);
-  });
-</script>
-
 </body>
 </html>
