@@ -26,19 +26,11 @@
 
 <section class="contact-section">
   <h2>Contact Me</h2>
-
-  <!-- Hidden iframe to submit Google Form without changing the look -->
-  <iframe name="hidden_iframe" style="display:none;"></iframe>
-
-  <form id="contact-form"
-        action="https://docs.google.com/forms/d/e/1FAIpQLScgR0YMhhrFpcbGvtKqSzijvOTujwc3vGFTki08eS1_T-9-HA/formResponse"
-        method="POST"
-        target="hidden_iframe">
-    <!-- Replace entry.XXXXXXXX with your Google Form entry IDs -->
-    <input type="text" name="entry.1234567890" placeholder="Your Name" required>
-    <input type="email" name="entry.0987654321" placeholder="Your Email" required>
-    <input type="text" name="entry.1122334455" placeholder="Your Phone" required>
-    <textarea name="entry.6677889900" rows="5" placeholder="Your Message" required></textarea>
+  <form id="contact-form" action="https://formspree.io/f/mdkwkvav" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="_replyto" placeholder="Your Email" required>
+    <input type="text" name="phone" placeholder="Your Phone" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
     <p id="form-message"></p>
   </form>
